@@ -1,16 +1,17 @@
 import React from 'react';
+import './Feed.css';
 
 const Feed = () => {
 
     return (
-        <div>
+        <div className="feed">
             <h2>This is the Feed!</h2>
-            <ol>
-                <li>Post</li>
-                <li>Post</li>
-                <li>Post</li>
-                <li>Post</li>
-            </ol>
+            <div className="posts">
+                <a>Post</a>
+                <a>Post</a>
+                <a>Post</a>
+                <a>Post</a>
+            </div>
         </div>
     )
 }

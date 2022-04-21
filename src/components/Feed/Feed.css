@@ -1,0 +1,9 @@
+.feed {
+    grid-column: 2/2;
+    margin: 0 auto;
+}
+.posts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
