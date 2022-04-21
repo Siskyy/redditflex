@@ -1,11 +1,30 @@
 :root {
+  /* Primary color Scheme */
 
+  --color-purple: rgb(168, 92, 249);
+  --color-darkpurple: rgb(85, 52, 165);
+  --color-blue: rgb(75, 123, 229);
+  --color-lightblue: rgb(111, 223, 223);
+
+  /* Monochromatic */
+
+  --color-lbmono: #8ac6c6;
+  --color-bluemono: #6c8acc;
+  --color-purplemono: #ae7fe0;
+  --color-dpmono: #5c488c;
+  
+  
+  /* Alternatives */
+
+  --color-skyblue: #5db3e2;
 }
 
 html,
 body {
   background: white;
-  color: black;
+  color: var(--color-blue);
+  font-family: "San Francisco";
+  font-weight: lighter;
 }
 
 p {
