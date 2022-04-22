@@ -7,9 +7,10 @@ const Subreddits = () => {
 
     return (
         <div className="subreddit-sidebar">
-            <div className="searchbar-container">
-                <input placeholder='🔍  Search posts' className="searchbar" type="search"/>
-            </div>
+            <form className="search-form">
+                <input placeholder='Search posts' className="searchbar" type="search"/>
+                <button type="submit"><BsSearch /></button>
+            </form>
             <div className="subreddits">
                 <a className="subreddit">Subreddit</a>
                 <a className="subreddit">Subreddit</a>

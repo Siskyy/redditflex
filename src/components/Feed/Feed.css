@@ -4,6 +4,8 @@
     border: 2px solid var(--color-darkpurple);
     width: 95%;
     border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .feed-title {
     text-align: center;
