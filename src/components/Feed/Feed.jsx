@@ -5,7 +5,7 @@ const Feed = () => {
 
     return (
         <div className="feed">
-            <h2>This is the Feed!</h2>
+            <h2 className="feed-title">This is the Feed!</h2>
             <div className="posts">
                 <a>Post</a>
                 <a>Post</a>

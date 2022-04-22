@@ -1,0 +1,30 @@
+.subreddit-sidebar {
+    grid-column: 3/3;
+    margin: 0 auto;
+    padding-right: 5rem;
+}
+.searchbar-container {
+    padding-bottom: 2rem;
+    display: flex;
+}
+.searchbar {
+    padding: 1.2rem 6rem 1.2rem 2rem;
+    text-align: left;
+    border: 2px solid var(--color-blue);
+    border-radius: 5rem;
+    font-size: 20px;
+    background: var(--color-background);
+}
+
+.subreddits {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid var(--color-purple);
+    border-radius: 1.5rem;
+    background: var(--color-background);
+}
+.subreddit {
+    padding: 1rem;
+}

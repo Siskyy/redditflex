@@ -5,12 +5,14 @@ import './App.css';
 
 import Header from './components/Header/Header';
 import Feed from './components/Feed/Feed';
+import Subreddits from './components/Subreddits/Subreddits';
 
 function App() {
     return (
         <>
             <Header />
             <Feed />
+            <Subreddits />
         </>
     )
 }

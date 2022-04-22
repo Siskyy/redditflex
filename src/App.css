@@ -6,6 +6,10 @@
   --color-blue: rgb(75, 123, 229);
   --color-lightblue: rgb(111, 223, 223);
 
+  --color-background: #444444;
+  --color-white: white;
+  --color-body: white;
+
   /* Monochromatic */
 
   --color-lbmono: #8ac6c6;
@@ -21,12 +25,21 @@
 
 html,
 body {
-  background: white;
-  color: var(--color-blue);
-  font-family: "San Francisco";
-  font-weight: lighter;
+  background: var(--color-background);
+  color: var(--color-body);
+  font-family: 'Raleway', sans-serif;
 }
-
+h1 {
+  font-weight: 600;
+}
 p {
   margin: 0;
+}
+
+
+/* Spans & Highlighting */
+
+.highlight {
+  font-weight: bold;
+  color: var(--color-purplemono)
 }

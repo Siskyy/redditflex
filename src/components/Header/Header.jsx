@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
         <header className="banner">
-            <h1>This is my Reddit API app!</h1>
+            <h2>Welcome to Reddit<span className="highlight">Flex</span></h2>
         </header>
     )
 
