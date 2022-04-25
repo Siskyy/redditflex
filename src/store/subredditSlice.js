@@ -33,7 +33,7 @@ const subredditSlice = createSlice({
 
 export const {
     loadState, success, failure
-} = redditSlice.actions;
+} = subredditSlice.actions;
 
 export default subredditSlice.reducer;
 
@@ -48,3 +48,5 @@ export const getSubreddits = () => async (dispatch) => {
         dispatch(failure());
     }
 };
+
+export const selectSubreddit = (state) => state.subreddits.subreddits;
