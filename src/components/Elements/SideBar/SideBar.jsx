@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './SubredditPanel.css';
+import './SideBar.css';
 
 /* react-icon imports */
 import {BsSearch} from '../../../../node_modules/react-icons/bs';
 import Subcards from './SubCards/Subcards';
+import SearchBar from './SearchBar/SearchBar';
+import Subreddits from './Subreddits/Subreddits';
 
 const SubredditPanel = () => {
 
@@ -28,21 +30,10 @@ const SubredditPanel = () => {
     return (
         <div>
             <form className="search-form">
-                <input 
-                    placeholder='Search posts' 
-                    className="searchbar" 
-                    type="text"
-                    value={subreddit}
-                    onChange={(e) => setSubreddit(e.target.value)}
-                />
+                <SearchBar />
                 <button type="submit"><BsSearch /></button>
             </form>
-            <ul className="subreddits">
-                {
-                    (posts != null) ? posts.map((subreddit, index) => 
-                    <Subcards key={index} subreddit={subreddit.data}/>) : ''
-                }
-            </ul>
+            <Subreddits />
         </div>
     )
 };
