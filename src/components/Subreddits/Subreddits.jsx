@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import './Subreddits.css';
 import Wrapper from '../Wrapper/Wrapper';
 import { useDispatch, useSelector } from 'react-redux';
-
+/* react-icon imports */
+import {BsSearch} from '../../../node_modules/react-icons/bs';
+/* Selcetors from slices */
 import { selectSubreddit, getSubreddits } from '../../store/subredditSlice';
 import { setSelectedSubreddit, selectSelectedSubreddit } from '../../store/redditPostSlice';
 
-/* react-icon imports */
 
-import {BsSearch} from '../../../node_modules/react-icons/bs';
 
 const Subreddits = () => {
 

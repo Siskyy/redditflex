@@ -4,15 +4,15 @@ import './App.css';
 // Component exports
 
 import Header from './components/Header/Header';
-import Feed from './components/Feed/Feed';
-import Subreddits from './components/Subreddits/Subreddits';
+import Feed from './components/Elements/Feed/Feed';
+import SideBar from './components/Elements/SideBar/SideBar';
 
 function App() {
     return (
         <>
             <Header />
             <Feed />
-            <Subreddits />
+            <SideBar />
         </>
     )
 }
