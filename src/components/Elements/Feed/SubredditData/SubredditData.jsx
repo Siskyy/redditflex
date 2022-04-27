@@ -14,8 +14,7 @@ const SubredditData = () => {
 
     const searchTerm = useSelector((state) => state.hardSubreddit.searchTerm);
     const currentSubreddit = useSelector((state) => state.hardSubreddit.selectedSubreddit);
-    const unFiltered = useSelector((state) => state.filter.unFilteredPosts);
-    const filteredPosts = useSelector(selectFilteredPosts);
+    const filteredPosts = useSelector((state) => state.filter.filteredPosts);
 
     useEffect(() => {
         fetch(`https://www.reddit.com/r/${currentSubreddit}.json`)
@@ -39,7 +38,7 @@ const SubredditData = () => {
     useEffect(() => {
     }, [searchTerm])
 
-    /* loop through posts and filter out items in searchTerm */
+    
 
 
 
@@ -48,12 +47,10 @@ const SubredditData = () => {
             
             <div className="subreddit-feed">
             {
-                (posts != null && filter === '') ? posts.map((post, index) => 
-                <Posts key={index} post={post.data}/>) : 
-                ((posts != null && filter !== '') ? posts.map((post, index) => 
-                <Posts key={index} post={post.data}/>) 
-                
-                : '' )
+                (posts != null && filteredPosts === '') ? posts.map((post, index) => 
+                <Posts key={index} post={post.data}/>) : ((posts != null && filteredPosts !== '') ? 
+                filteredPosts.map((post, index) => 
+                <Posts key={index} post={post.data}/>) : '')
             }
             </div>
             <h3></h3>

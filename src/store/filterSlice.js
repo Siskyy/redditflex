@@ -17,6 +17,9 @@ export const filterSlice = createSlice({
         },
         filterPosts(state, action) {
             state.filteredPosts = action.payload;
+        },
+        setFilteredPosts(state, action) {
+            state.filteredPosts = action.payload;
         }
     }
 });
@@ -25,6 +28,7 @@ export const {
     setFilter,
     setUnfilteredPosts,
     filterPosts,
+    setFilteredPosts,
 } = filterSlice.actions;
 
 export default filterSlice.reducer;
