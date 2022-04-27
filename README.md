@@ -14,3 +14,14 @@ I am currently building this React web app as my next ambitious project! I plan 
   - Reddit API - From [Reddit] (https://www.reddit.com/)
 
 ## wireframing
+
+## Next up
+
+- implement toggle comments button on each post
+- if toggle comments is on:
+  - fetch comments for that post.id
+  - else fetch nothing
+
+-render full contents of each post
+
+- done?!
