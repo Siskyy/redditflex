@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 const SubredditData = () => {
 
     const [posts, setPosts] = useState([]);
-    const [subreddit, setSubreddit] = useState('askreddit');
+    const [subreddit, setSubreddit] = useState('');
 
     const searchTerm = useSelector((state) => state.hardSubreddit.searchTerm);
     const currentSubreddit = useSelector((state) => state.hardSubreddit.selectedSubreddit);
@@ -25,17 +25,11 @@ const SubredditData = () => {
                 }
             })
         })
-    })
+    }, [currentSubreddit])
 
     return (
         <div>
-            <input 
-                placeholder='Search posts' 
-                className="searchbar" 
-                type="text" 
-                value={subreddit}
-                onChange={(e) => setSubreddit(e.target.value)}
-            />
+            
             <div className="feed">
             {
                 (posts != null) ? posts.map((post, index) => 

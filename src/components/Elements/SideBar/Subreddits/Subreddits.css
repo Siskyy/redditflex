@@ -1,0 +1,28 @@
+.subreddit-list {
+    display: grid;
+    grid-template-columns: 95%;
+    align-content: center;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.subreddit-card {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    align-self: center;
+    background: var(--color-purple);
+    border-radius: 1rem;
+    border: 1px solid var(--color-purplemono);
+    margin-bottom: .8rem;
+    margin-top: .8rem;
+}
+
+.subreddit-card p {
+    font-size: 1.2rem;
+}
+
+.subreddit-card:hover {
+    cursor: pointer;
+    background-color: var(--color-purplemono);
+    transition: 200ms ease-in-out;
+}
