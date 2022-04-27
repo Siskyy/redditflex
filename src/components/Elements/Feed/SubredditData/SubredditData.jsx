@@ -34,12 +34,9 @@ const SubredditData = () => {
 
     useEffect(() => {
         dispatch(setUnfilteredPosts(posts));
-        console.log(posts)
     }, [posts])
 
     useEffect(() => {
-        setFilter(searchTerm)
-        //dispatch(filterPosts(unFiltered))
     }, [searchTerm])
 
     /* loop through posts and filter out items in searchTerm */
