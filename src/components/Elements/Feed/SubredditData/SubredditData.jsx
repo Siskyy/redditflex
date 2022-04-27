@@ -2,13 +2,18 @@ import React, { useState, useEffect } from 'react';
 
 import Posts from '../../Feed/Posts/Posts';
 
+import { useSelector, useDispatch } from 'react-redux';
+
 const SubredditData = () => {
 
     const [posts, setPosts] = useState([]);
     const [subreddit, setSubreddit] = useState('askreddit');
 
+    const searchTerm = useSelector((state) => state.hardSubreddit.searchTerm);
+    const currentSubreddit = useSelector((state) => state.hardSubreddit.selectedSubreddit);
+
     useEffect(() => {
-        fetch(`https://www.reddit.com/r/${subreddit}.json`)
+        fetch(`https://www.reddit.com/r/${currentSubreddit}.json`)
         .then(response => {
             if (response.status != 200) {
                 console.log("error");

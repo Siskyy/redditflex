@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { setSearchTerm } from '../../../../store/hardRedditSlice';
 
 const SearchBar = () => {
 
@@ -9,11 +9,10 @@ const SearchBar = () => {
 
     return (
         <input 
-            placeholder={selectedSubreddit} 
+            placeholder={`Search in ${selectedSubreddit}`}
             className="searchbar" 
             type="text"
-            value={selectedSubreddit}
-            onChange=''
+            onChange={(e) => {dispatch(setSearchTerm(e.target.value))}}
         />
     )
 };

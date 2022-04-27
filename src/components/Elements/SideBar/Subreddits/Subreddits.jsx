@@ -9,7 +9,6 @@ const Subreddits = () => {
 
     return (
         <>
-        <h3>Selected: {selection}</h3>
         <ul className="subreddits">
             <button onClick={() => {dispatch(selectedSubreddit('programming'))}}>
                 programming
