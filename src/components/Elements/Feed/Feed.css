@@ -1,27 +1,9 @@
 .feed {
     grid-column: 1/3;
     margin: 0 auto;
-    border: 2px solid var(--color-darkpurple);
+    border: 2px solid var(--color-purplemono);
     width: 95%;
     border-radius: 1.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-.feed-title {
-    text-align: center;
-    font-size: 40px;
-}
-.posts {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.posts > a {
-    padding-bottom: 3rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
-    background: var(--color-purplemono);
-    width: 95%;
-    border-radius: 1rem;
 }

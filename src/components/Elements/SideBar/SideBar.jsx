@@ -46,11 +46,8 @@ const SideBar = () => {
         <div>
             <form className="search-form">
                 <SearchBar />
-                <button type="submit"><BsSearch /></button>
+                {/* <button type="submit"><BsSearch /></button> */}
             </form>
-            <div>
-                {/* <h4>{firstPost}</h4> */}
-            </div>
             <div className="subreddits">
             <Subreddits />
             </div>

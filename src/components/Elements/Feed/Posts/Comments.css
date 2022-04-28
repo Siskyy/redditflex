@@ -1,0 +1,22 @@
+.post-comment {
+    background: var(--color-bluemono);
+    margin: 8px 0;
+    padding: 16px;
+    /* add box shadow transition */
+}
+
+.comment-data {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--color-background);
+}
+
+.time-created {
+    margin: auto;
+    font-style: italic;
+}

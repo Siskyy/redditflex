@@ -1,6 +1,0 @@
-.subreddit-feed {
-    display: grid;
-    grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: auto;
-    row-gap: .8rem;
-}

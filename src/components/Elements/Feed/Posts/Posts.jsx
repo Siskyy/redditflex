@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react';
-import './Posts.css';
+//import './Posts.css';
+import './BetterPost.css';
 import Comments from './Comments';
+import {TiMessage} from '../../../../../node_modules/react-icons/ti';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setCommentsForPost, setToggleComments } from '../../../../store/commentSlice';
@@ -54,28 +56,37 @@ const Posts = (props) => {
     }
 
     return (
-        
-        <article className="reddit-post">
-            <a 
-                href={`https://www.reddit.com/${props.post.permalink}`}
-            >
-                <h3 className="post-title">{props.post.title}</h3>
-            </a>
-            <p>{props.post.author}</p>
-            <p>{`Comments: ${props.post.num_comments}`}</p>
-            <p>{`post id: ${props.post.id}`}</p>
-            <p>{}</p>
-            <button 
-                className="toggleComments"
-                onClick={changeToggle}
-            >{`Comments ${commentsOn}`}</button>
-            <div className="comment-section">
-                {
-                    (comments != null && commentsOn === true) ? comments.map((comment, index) => 
-                    <Comments key={index} comment={comment.data}/>) : ''
-                }
-            </div>
-        </article>
+        <div className="large-container">
+            <article className="reddit-post">
+                <div className="post-container">
+                    <h3 className="post-title">{props.post.title}</h3>
+                    <div className="post-image-container">
+                        <img src={props.post.url} alt="" className="post-image"/>
+                    </div>
+                    
+                    <div className="post-details">
+                        <span className="author-data">
+                            <span className="author">{props.post.author}</span>
+                        </span>
+                        <span>{props.post.created_utc}</span>
+                        <p>{`post id: ${props.post.id}`}</p>
+                    
+                        <span className="post-comment-data">
+                            <button className="toggleComments" onClick={changeToggle}>
+                                <TiMessage />
+                            </button>
+                            <p>{`Comments: ${props.post.num_comments}`}</p>
+                        </span>
+                    </div>
+                    <div className="comment-section">
+                        {
+                            (comments != null && commentsOn === true) ? comments.map((comment, index) => 
+                            <Comments key={index} comment={comment.data}/>) : ''
+                        }
+                    </div>
+                </div>
+            </article>
+        </div>
     )
 };
 export default Posts;
