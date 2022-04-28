@@ -7,6 +7,7 @@ export const filterSlice = createSlice({
         filter: '',
         filteredPosts: [],
         unfilteredPosts: [],
+        showingComments: false,
     },
     reducers: {
         setFilter(state, action) {

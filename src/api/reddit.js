@@ -19,8 +19,8 @@ export const fetchSubredditPosts = async (subreddit) => {
 };
 
 /* Fetch the comments for post of the current post the current subreddit selected */
-export const fetchComments = async (link) => {
-    const response = await fetch(`${RedditAPI}${link}.json`);
+export const fetchComments = async (permalink) => {
+    const response = await fetch(`${RedditAPI}${permalink}.json`);
     const json = await response.json();
 
     return json[1].data.children.map((subreddit) => subreddit.data);

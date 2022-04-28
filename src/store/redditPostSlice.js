@@ -98,11 +98,11 @@ export const getSubredditPosts = () => async (dispatch) => {
 
 /* get the comments for the post selected */
 
-export const getComments = (index, link) => async (dispatch) => {
+export const getComments = (index, permalink) => async (dispatch) => {
     try {
         dispatch(setComments(index));
-        const comments = await fetchComments();
-        dispatch(loadCommentSuccess());
+        const comments = await fetchComments(permalink);
+        dispatch(loadCommentSuccess({index, comments}));
     } catch (error) {
         dispatch(loadCommentFailure(index));
     }

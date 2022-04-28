@@ -8,13 +8,25 @@
     border-radius: .5rem;
     margin-top: 1rem;
     display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
 }
 .reddit-post a {
     text-align: left;
     color: var(--color-dark);
     padding-left: 20px;
     text-decoration: none;
+    grid-column: 1/5;
+    grid-row: 1/1;
 }
 
 .post-title h3 {
+    
+}
+
+.toggleComments {
+    padding: .5rem;
+    grid-row: 3/3;
+    grid-column: 1/1;
 }
