@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-//import './Posts.css';
 import './BetterPost.css';
 import Comments from './Comments';
 import {TiMessage} from '../../../../../node_modules/react-icons/ti';
