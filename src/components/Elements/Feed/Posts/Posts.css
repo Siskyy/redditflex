@@ -3,6 +3,10 @@
     border-radius: 4px;
     padding: 24px;
 }
+.post-container {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
 
 .redditpost-darkmode {
     text-decoration: none;
@@ -33,9 +37,6 @@
     grid-template-rows: max-content min-content max-content 2rem 40px min-content;
 }
 
-.post-title {
-    color: blue;
-}
 
 .post-author {
     grid-row: 2/2;

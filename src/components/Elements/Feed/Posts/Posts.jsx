@@ -3,6 +3,7 @@ import React, { useState, useEffect} from 'react';
 import './BetterPost.css';
 import Comments from './Comments';
 import {TiMessage} from '../../../../../node_modules/react-icons/ti';
+import moment from 'moment';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setCommentsForPost, setToggleComments } from '../../../../store/commentSlice';
@@ -68,8 +69,7 @@ const Posts = (props) => {
                         <span className="author-data">
                             <span className={DarkMode ? 'author-darkmode' : 'author-lightmode'}>{props.post.author}</span>
                         </span>
-                        <span>{props.post.created_utc}</span>
-                        <p>{`post id: ${props.post.id}`}</p>
+                        <span>{moment.unix(props.post.created_utc).fromNow()}</span>
                     
                         <span className="post-comment-data">
                             <button className="toggleComments" onClick={changeToggle}>

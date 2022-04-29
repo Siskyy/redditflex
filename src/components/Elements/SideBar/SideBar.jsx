@@ -11,6 +11,7 @@ import Subreddits from './Subreddits/Subreddits';
 
 const SideBar = () => {
 
+    const DarkMode = useSelector((state) => state.comment.darkMode);
     const post = useSelector((state) => state.filter.unfilteredPosts);
     const searchTerm = useSelector((state) => state.hardSubreddit.searchTerm);
     const dispatch = useDispatch();
@@ -44,11 +45,11 @@ const SideBar = () => {
 
     return (
         <div>
-            <form className="search-form">
+            <form className={DarkMode ? 'searchform-dark' : 'searchform-light'}>
                 <SearchBar />
                 {/* <button type="submit"><BsSearch /></button> */}
             </form>
-            <div className="subreddits">
+            <div className={DarkMode ? 'subreddits-dark' : 'subreddits-light'}>
             <Subreddits />
             </div>
             

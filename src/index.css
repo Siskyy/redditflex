@@ -16,3 +16,9 @@ body {
   align-content: center;
   align-items: start;
 }
+
+@media only screen and (max-width: 600px) {
+  #root {
+    grid-template-columns: 1fr;
+  }
+}

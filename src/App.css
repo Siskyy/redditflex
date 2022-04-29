@@ -27,6 +27,7 @@
 
   --color-darkmode50: #F0F4F8;
   --color-darkmode100: #D9E2EC;
+  --color-darkmode400: #829AB1;
   --color-darkmode500: #627D98;
   --color-darkmode900: #102A43;
 }
@@ -49,7 +50,7 @@ p {
 
 .highlight {
   font-weight: bold;
-  color: var(--color-darkpurple);
+  color: var(--color-darkmode500);
 }
 
 .darkMode {

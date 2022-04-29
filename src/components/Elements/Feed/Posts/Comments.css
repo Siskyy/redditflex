@@ -1,11 +1,26 @@
-.post-comment {
-    background: var(--color-bluemono);
+.post-comment-darkmode {
+    background: var(--color-background);
     margin: 8px 0;
     padding: 16px;
-    /* add box shadow transition */
+    
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.post-comment-lightmode {
+    background: white;
+    color: black;
+    margin: 8px 0;
+    padding: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.comment-data {
+.comment-data-darkmode {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+}
+.comment-data-lightmode {
     display: flex;
     margin-bottom: 16px;
     align-items: center;
@@ -13,10 +28,10 @@
 
 .comment-author {
     font-weight: bold;
-    color: var(--color-background);
+    color: var(--color-purple);
 }
 
 .time-created {
-    margin: auto;
+    margin-left: auto;
     font-style: italic;
 }
