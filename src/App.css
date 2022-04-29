@@ -21,6 +21,14 @@
   /* Alternatives */
 
   --color-skyblue: #5db3e2;
+  --color-hover: #0000000f;
+
+  /* dark mode ui */
+
+  --color-darkmode50: #F0F4F8;
+  --color-darkmode100: #D9E2EC;
+  --color-darkmode500: #627D98;
+  --color-darkmode900: #102A43;
 }
 
 html,
@@ -42,4 +50,12 @@ p {
 .highlight {
   font-weight: bold;
   color: var(--color-darkpurple);
+}
+
+.darkMode {
+  background-color: var(--color-purple);
+}
+
+.lightMode {
+  background-color: var(--color-skyblue);
 }

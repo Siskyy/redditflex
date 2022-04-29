@@ -6,6 +6,7 @@ export const commentSlice = createSlice({
     initialState: {
         toggleComments: false,
         commentsForPost: [],
+        darkMode: true,
     },
     reducers: {
         setToggleComments(state, action) {
@@ -13,13 +14,17 @@ export const commentSlice = createSlice({
         },
         setCommentsForPost(state, action) {
             state.commentsForPost = action.payload;
-        }
+        },
+        setDarkMode(state, action) {
+            state.darkMode = action.payload;
+        },
     }
 });
 
 export const {
     setToggleComments,
     setCommentsForPost,
+    setDarkMode,
 } = commentSlice.actions;
 
 export default commentSlice.reducer;

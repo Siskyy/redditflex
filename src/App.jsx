@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { useSelector } from 'react-redux';
 
 // Component exports
 
@@ -8,11 +9,15 @@ import Feed from './components/Elements/Feed/Feed';
 import SideBar from './components/Elements/SideBar/SideBar';
 
 function App() {
+    
+    const DarkMode = useSelector((state) => state.comment.darkMode);
+
+
     return (
         <>
-            <Header />
-            <Feed />
-            <SideBar />
+            <Header className={DarkMode ? 'darkMode' : 'lightMode'}/>
+            <Feed className={DarkMode ? 'darkMode' : 'lightMode'}/>
+            <SideBar className={DarkMode ? 'darkMode' : 'lightMode'}/>
         </>
     )
 }

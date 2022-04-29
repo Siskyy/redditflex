@@ -9,7 +9,7 @@ import { setCommentsForPost, setToggleComments } from '../../../../store/comment
 
 const Posts = (props) => {
 
-    const commentToggle = useSelector((state) => state.comment.toggleComments)
+    const DarkMode = useSelector((state) => state.comment.darkMode);
     const dispatch = useDispatch();
     const [comments, setComments] = useState([]);
     const [commentsOn, setCommentsOn] = useState(false);
@@ -57,23 +57,23 @@ const Posts = (props) => {
 
     return (
         <div className="large-container">
-            <article className="reddit-post">
+            <article className={DarkMode ? 'redditpost-darkmode' : 'redditpost-lightmode'}>
                 <div className="post-container">
-                    <h3 className="post-title">{props.post.title}</h3>
+                    <h3 className={DarkMode ? 'posttitle-darkmode' : 'posttitle-lightmode'}>{props.post.title}</h3>
                     <div className="post-image-container">
                         <img src={props.post.url} alt="" className="post-image"/>
                     </div>
                     
-                    <div className="post-details">
+                    <div className={DarkMode ? 'postdetails-darkmode' : 'postdetails-lightmode'}>
                         <span className="author-data">
-                            <span className="author">{props.post.author}</span>
+                            <span className={DarkMode ? 'author-darkmode' : 'author-lightmode'}>{props.post.author}</span>
                         </span>
                         <span>{props.post.created_utc}</span>
                         <p>{`post id: ${props.post.id}`}</p>
                     
                         <span className="post-comment-data">
                             <button className="toggleComments" onClick={changeToggle}>
-                                <TiMessage />
+                                <TiMessage className="toggle-comments-icon" />
                             </button>
                             <p>{`Comments: ${props.post.num_comments}`}</p>
                         </span>
