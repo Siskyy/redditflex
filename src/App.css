@@ -45,7 +45,7 @@
 
 html,
 body {
-  background: var(--color-background);
+  background: var(--color-p800);
   color: var(--color-body);
   font-family: 'Raleway', sans-serif;
 }

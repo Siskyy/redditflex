@@ -15,7 +15,6 @@ const Subreddits = () => {
                 onClick={() => {dispatch(selectedSubreddit('programming'))}}
                 className={DarkMode ? 'subredditcard-dark' : 'subredditcard-light'}
             >
-                <img />
                 <p className="subreddit-title">programming</p>
             </button>
             <button 

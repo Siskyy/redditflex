@@ -83,7 +83,7 @@ const Posts = (props) => {
                             <button className="toggleComments" onClick={changeToggle}>
                                 <TiMessage className="toggle-comments-icon" />
                             </button>
-                            <p>{`Comments: ${props.post.num_comments}`}</p>
+                            <p className="comment-count">{props.post.num_comments}</p>
                         </span>
                     </div>
                     <div className="comment-section">

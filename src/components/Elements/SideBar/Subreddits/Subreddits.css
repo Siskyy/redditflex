@@ -2,7 +2,7 @@
 
 .subreddit-list {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 95%;
     align-content: center;
     justify-content: center;
     padding-left: 0;
@@ -12,13 +12,14 @@
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     align-self: center;
-    background: var(--color-darkmode500);
-    border: 1px solid var(--color-darkmode500);
+    background: var(--color-p700);
+    border: 1px solid var(--color-p700);
     border-radius: 4px;
-    margin-bottom: 0;
+    margin-bottom: 4px;
     margin-top: 0;
     font-size: 1.2rem;
     font-weight: 600;
+    color: var(--color-p100);
 }
 .subredditcard-light {
     padding-bottom: 1.5rem;
@@ -27,7 +28,7 @@
     background: var(--color-skyblue);
     border-radius: 4px;
     border: 1px solid var(--color-skyblue);
-    margin-bottom: 0;
+    margin-bottom: 4px;
     margin-top: 0;
     font-size: 1.2rem;
     font-weight: 600;
@@ -36,7 +37,7 @@
 
 .subredditcard-dark:hover {
     cursor: pointer;
-    background-color: var(--color-darkmode400);
+    background-color: var(--color-p600);
     transition: 200ms ease-in-out;
 }
 .subredditcard-light:hover {
