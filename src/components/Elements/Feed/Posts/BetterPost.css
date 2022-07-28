@@ -11,7 +11,7 @@
     display: flex;
     width: 95%;
     border-radius: 8px;
-    background-color: var(--color-p700);
+    background-color: rgba(50, 50, 50, .8);
     opacity: .9;
 }
 .redditpost-lightmode {
@@ -62,7 +62,8 @@
 }
 .author-darkmode {
     font-weight: bold;
-    color: var(--color-p100);
+    color: var(--color-p500);
+    font-size: .9rem;
 }
 .author-lightmode {
     font-weight: bold;
@@ -92,7 +93,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--color-p100);
+    color: var(--color-p500);
     padding: 0;
     display: flex;
     align-items: center;
@@ -100,6 +101,7 @@
 }
 .comment-count {
     font-family: 'Poppins', sans-serif;
+    color: var(--color-p100);
 }
 
 .toggleComments:hover {

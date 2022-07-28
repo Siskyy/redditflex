@@ -6,7 +6,7 @@
   --color-blue: rgb(75, 123, 229);
   --color-lightblue: rgb(111, 223, 223);
 
-  --color-background: #444444;
+  --color-background: rgb(48, 48, 48);
   --color-white: white;
   --color-body: white;
   --color-dark: #121212;
@@ -45,7 +45,7 @@
 
 html,
 body {
-  background: var(--color-p800);
+  background: var(--color-background);
   color: var(--color-body);
   font-family: 'Raleway', sans-serif;
 }

@@ -17,7 +17,7 @@ header {
     justify-content: center;
 
     /* Changes with switch */
-    background-color: var(--color-p700);
+    background-color: var(--color-background);
 }
 
 .banner-lightmode {
