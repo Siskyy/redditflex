@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
 .subreddit-list {
     display: grid;
     grid-template-columns: 100%;
@@ -41,4 +43,8 @@
     cursor: pointer;
     background-color: var(--color-blue);
     transition: 200ms ease-in-out;
+}
+
+.subreddit-title {
+    font-family: 'Poppins', sans-serif;
 }

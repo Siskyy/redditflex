@@ -72,7 +72,7 @@ header {
     content: url('../../assets/images/moon-line.svg');
     width: 36px;
     height: 36px;
-    background-color: var(--color-darkpurple);
+    background-color: var(--color-p500);
     border: 2px solid #fff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, .25);

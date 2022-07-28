@@ -30,6 +30,17 @@
   --color-darkmode400: #829AB1;
   --color-darkmode500: #627D98;
   --color-darkmode900: #102A43;
+
+  /* New color palette (July 2022) */
+  --color-p100: #E2D9F3;
+  --color-p200: #C5B3E6;
+  --color-p300: #A98EDA;
+  --color-p400: #8C68CD;
+  --color-p500: #6F42C1;
+  --color-p600: #59359A;
+  --color-p700: #432874;
+  --color-p800: #160D27;
+
 }
 
 html,
@@ -50,7 +61,7 @@ p {
 
 .highlight {
   font-weight: bold;
-  color: var(--color-darkmode500);
+  color: var(--color-p500);
 }
 
 .darkMode {

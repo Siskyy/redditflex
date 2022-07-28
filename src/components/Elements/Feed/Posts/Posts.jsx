@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import './BetterPost.css';
 import Comments from './Comments';
 import {TiMessage} from '../../../../../node_modules/react-icons/ti';
+import {ImArrowUp2, ImArrowDown2} from '../../../../../node_modules/react-icons/im';
 import moment from 'moment';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,6 +14,9 @@ const Posts = (props) => {
     const dispatch = useDispatch();
     const [comments, setComments] = useState([]);
     const [commentsOn, setCommentsOn] = useState(false);
+
+    // VoteCount state
+    const [ups, setUps] = useState(props.post.ups);
 
 
     useEffect(() => {
@@ -58,6 +62,11 @@ const Posts = (props) => {
     return (
         <div className="large-container">
             <article className={DarkMode ? 'redditpost-darkmode' : 'redditpost-lightmode'}>
+                <div className="votes-box">
+                    <button className="upvote vote"><ImArrowUp2 /></button>
+                    <p className="vote-count">{props.post.ups}</p>
+                    <button className="downvote vote"><ImArrowDown2 /></button>
+                </div>
                 <div className="post-container">
                     <h3 className={DarkMode ? 'posttitle-darkmode' : 'posttitle-lightmode'}>{props.post.title}</h3>
                     <div className="post-image-container">
