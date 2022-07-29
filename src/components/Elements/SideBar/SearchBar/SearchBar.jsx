@@ -17,12 +17,15 @@ const SearchBar = () => {
 
 
     return (
-        <input 
-            placeholder={`Search in ${selectedSubreddit}`}
-            className="searchbar" 
-            type="text"
-            onChange={(e) => {dispatch(setSearchTerm(e.target.value))}}
-        />
+        <>
+            <input 
+                placeholder={`Search in ${selectedSubreddit}`}
+                className="searchbar" 
+                type="text"
+                onChange={(e) => {dispatch(setSearchTerm(e.target.value))}}
+            />
+            
+        </>
     )
 };
 
