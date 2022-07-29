@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {BsSearch} from '../../../../../node_modules/react-icons/bs';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSearchTerm, setSubSearchTerm, selectedSubreddit } from '../../../../store/hardRedditSlice';
+import { setSubSearchTerm, selectedSubreddit } from '../../../../store/hardRedditSlice';
 
 const Redditsearch = () => {
     
@@ -23,6 +23,7 @@ const Redditsearch = () => {
                     />
                 <button type="button"
                     onClick={() => {dispatch(selectedSubreddit(subSearchTerm))}}
+                    className="subreddit-search-button"
                 ><BsSearch /></button>
             </form>
                

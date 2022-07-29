@@ -56,13 +56,14 @@
     margin-left: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
 }
 
-.search-form button:hover {
-    background: var(--color-bluemono);
-    transition: 600ms ease-in-out;
-    transform: rotate(360deg);
+.subreddit-search-button:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
+
 
 .subreddits-dark {
     display: grid;

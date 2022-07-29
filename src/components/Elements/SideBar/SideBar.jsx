@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './SideBar.css';
 import { useSelector, useDispatch } from 'react-redux';
 /* actions */
 import { setFilteredPosts } from '../../../store/filterSlice';
-/* react-icon imports */
-import {BsSearch} from '../../../../node_modules/react-icons/bs';
-import Subcards from './SubCards/Subcards';
-import SearchBar from './SearchBar/SearchBar';
+
 import Subreddits from './Subreddits/Subreddits';
 import Redditsearch from './SearchBar/Redditsearch';
 
@@ -24,12 +21,13 @@ const SideBar = () => {
     for (let i=0; i < post.length; i++) {
         postTitles.push(post[i].data.title);
     }
-    
+    /*
     useEffect(() => {
         console.log("we printin")
         console.log(post.length)
         console.log(postTitles)
     }, [post])
+    */
 
     useEffect(() => {
         if (searchTerm !== '' && post !== '') {
