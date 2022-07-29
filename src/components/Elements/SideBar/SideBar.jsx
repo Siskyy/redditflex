@@ -8,6 +8,7 @@ import {BsSearch} from '../../../../node_modules/react-icons/bs';
 import Subcards from './SubCards/Subcards';
 import SearchBar from './SearchBar/SearchBar';
 import Subreddits from './Subreddits/Subreddits';
+import Redditsearch from './SearchBar/Redditsearch';
 
 const SideBar = () => {
 
@@ -45,9 +46,9 @@ const SideBar = () => {
 
     return (
         <div>
-            <form className={DarkMode ? 'searchform-dark' : 'searchform-light'}>
-                <SearchBar />
-                {/* <button type="submit"><BsSearch /></button> */}
+            <form className={DarkMode ? 'searchform-dark2' : 'searchform-light2'}>
+                <Redditsearch />
+                <button type="submit"><BsSearch /></button>
             </form>
             <div className={DarkMode ? 'subreddits-dark' : 'subreddits-light'}>
             <Subreddits />
