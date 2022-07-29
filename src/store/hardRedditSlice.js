@@ -24,6 +24,7 @@ export const hardSubredditSlice = createSlice({
         selectedSubreddit: initialSelectedSubreddit,
         subreddits: initialSubreddits,
         searchTerm: '',
+        subSearchTerm: '',
     },
     reducers: {
         selectedSubreddit(state, action) {
@@ -32,12 +33,16 @@ export const hardSubredditSlice = createSlice({
         setSearchTerm(state, action) {
             state.searchTerm = action.payload;
         },
+        setSubSearchTerm(state, action) {
+            state.subSearchTerm = action.payload;
+        }
     }
 });
 
 export const {
     selectedSubreddit,
     setSearchTerm,
+    setSubSearchTerm,
 } = hardSubredditSlice.actions;
 
 export default hardSubredditSlice.reducer;

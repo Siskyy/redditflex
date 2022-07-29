@@ -46,10 +46,7 @@ const SideBar = () => {
 
     return (
         <div>
-            <form className={DarkMode ? 'searchform-dark2' : 'searchform-light2'}>
-                <Redditsearch />
-                <button type="submit"><BsSearch /></button>
-            </form>
+            <Redditsearch />
             <div className={DarkMode ? 'subreddits-dark' : 'subreddits-light'}>
             <Subreddits />
             </div>
