@@ -13,6 +13,15 @@ const Header = () => {
         dispatch(setDarkMode(darkMode))
     }, [darkMode])
 
+    useEffect(() => {
+        if (!darkMode) {
+            document.body.style.background = '#CFF4FC';
+        } else {
+            document.body.style.background = 'rgb(48, 48, 48)';
+        }
+        
+    }, [darkMode])
+
     return (
         <header className={DarkMode ? 'banner-darkmode' : 'banner-lightmode'}>
             <h2 className="web-title">Reddit<span className="highlight">Flex</span></h2>

@@ -17,7 +17,7 @@ const Feed = () => {
                     <form className={DarkMode ? 'searchform-dark' : 'searchform-light'}>
                         <SearchBar />
                     </form>
-                    <button className="filter-button">
+                    <button className={DarkMode ? 'filter-button filter-dark' : 'filter-button filter-light'}>
                         <BsSortDown />
                     </button>  
                 </div>

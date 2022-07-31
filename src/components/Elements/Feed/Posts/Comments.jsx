@@ -13,7 +13,7 @@ const Comments = (props) => {
         <>
             <div className={DarkMode ? 'post-comment-darkmode' : 'post-comment-lightmode'}>
                 <div className={DarkMode ? 'comment-data-darkmode' : 'comment-data-lightmode'}>
-                    <p className="comment-author">{props.comment.author}</p>
+                    <p className={DarkMode ? 'comment-author-dark' : 'comment-author-light'}>{props.comment.author}</p>
                     <p className="time-created">{moment.unix(props.comment.created_utc).fromNow()}</p>
                 </div>
                 <ReactMarkdown>{Comment}</ReactMarkdown>

@@ -31,7 +31,7 @@
   --color-darkmode500: #627D98;
   --color-darkmode900: #102A43;
 
-  /* New color palette (July 2022) */
+  /* New color palette (July 2022) ----------------------------------- */
   --color-p100: #E2D9F3;
   --color-p200: #C5B3E6;
   --color-p300: #A98EDA;
@@ -40,12 +40,20 @@
   --color-p600: #59359A;
   --color-p700: #432874;
   --color-p800: #160D27;
-
+  /* Light */
+  --color-b100: #CFF4FC;
+  --color-b200: #9EEAF9;
+  --color-b300: #6EDFF6;
+  --color-b400: #3DD5F3;
+  --color-b500: #11CAF0;
+  --color-b600: #08A2C0;
+  --color-b700: #077990;
+  --color-b800: #064E5D;
 }
 
 html,
 body {
-  background: var(--color-background);
+  
   color: var(--color-body);
   font-family: 'Raleway', sans-serif;
 }

@@ -2,12 +2,11 @@
     background: var(--color-background);
     margin: 8px 0;
     padding: 16px;
-    
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .post-comment-lightmode {
-    background: white;
+    background: var(--color-b100);
     color: black;
     margin: 8px 0;
     padding: 16px;
@@ -26,9 +25,13 @@
     align-items: center;
 }
 
-.comment-author {
+.comment-author-dark {
     font-weight: bold;
     color: var(--color-purple);
+}
+.comment-author-light {
+    font-weight: bold;
+    color: var(--color-b600);
 }
 
 .time-created {

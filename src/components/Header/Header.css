@@ -34,7 +34,7 @@ header {
     justify-content: center;
 
     /* Changes with switch */
-    background-color: var(--color-skyblue);
+    background-color: var(--color-b500);
 }
 
 .web-title {

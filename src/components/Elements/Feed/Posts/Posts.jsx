@@ -62,7 +62,7 @@ const Posts = (props) => {
     return (
         <div className="large-container">
             <article className={DarkMode ? 'redditpost-darkmode' : 'redditpost-lightmode'}>
-                <div className="votes-box">
+                <div className={DarkMode ? 'votes-box-dark' : 'votes-box-light'}>
                     <button className="upvote vote"><ImArrowUp2 /></button>
                     <p className="vote-count">{props.post.ups}</p>
                     <button className="downvote vote"><ImArrowDown2 /></button>
@@ -80,10 +80,11 @@ const Posts = (props) => {
                         <span>{moment.unix(props.post.created_utc).fromNow()}</span>
                     
                         <span className="post-comment-data">
-                            <button className="toggleComments" onClick={changeToggle}>
+                            <button className={DarkMode ? 'toggleComments-dark' : 'toggleComments-light'} 
+                                onClick={changeToggle}>
                                 <TiMessage className="toggle-comments-icon" />
                             </button>
-                            <p className="comment-count">{props.post.num_comments}</p>
+                            <p className={DarkMode ? 'comment-count-darkmode' : 'comment-count-lightmode'}>{props.post.num_comments}</p>
                         </span>
                     </div>
                     <div className="comment-section">
