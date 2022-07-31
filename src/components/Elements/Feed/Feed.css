@@ -31,14 +31,14 @@
     display: flex;
     align-items: center;
     margin-right: 2rem;
-    width: 70%;
+    width: 65%;
 }
 .searchform-light {
     padding: 10px 0 1rem 24px;
     display: flex;
     align-items: center;
     margin-right: 2rem;
-    width: 70%;
+    width: 65%;
 }
 
 .searchform-dark .searchbar {
@@ -91,4 +91,9 @@
 }
 .filter-dark {
     background-color: var(--color-p500);
+}
+
+.sortBy-buttons {
+    display: flex;
+    gap: 15px;
 }

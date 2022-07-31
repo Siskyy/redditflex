@@ -15,9 +15,11 @@ const SubredditData = () => {
     const searchTerm = useSelector((state) => state.hardSubreddit.searchTerm);
     const currentSubreddit = useSelector((state) => state.hardSubreddit.selectedSubreddit);
     const filteredPosts = useSelector((state) => state.filter.filteredPosts);
+    const sortBy = useSelector((state) => state.hardSubreddit.sortBy);
 
     useEffect(() => {
-        fetch(`https://www.reddit.com/r/${currentSubreddit}.json`)
+        
+        fetch(`https://www.reddit.com/r/${currentSubreddit}/${sortBy}.json`)
         .then(response => {
             if (response.status != 200) {
                 console.log("error");
@@ -29,7 +31,7 @@ const SubredditData = () => {
                 }
             })
         })
-    }, [currentSubreddit])
+    }, [currentSubreddit, sortBy])
 
     useEffect(() => {
         dispatch(setUnfilteredPosts(posts));

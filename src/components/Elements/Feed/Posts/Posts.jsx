@@ -3,6 +3,8 @@ import './BetterPost.css';
 import Comments from './Comments';
 import {TiMessage} from '../../../../../node_modules/react-icons/ti';
 import {ImArrowUp2, ImArrowDown2} from '../../../../../node_modules/react-icons/im';
+import {BsHeart} from '../../../../../node_modules/react-icons/bs';
+import {HiOutlineExternalLink} from '../../../../../node_modules/react-icons/hi';
 import moment from 'moment';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,7 +18,7 @@ const Posts = (props) => {
     const [commentsOn, setCommentsOn] = useState(false);
 
     // VoteCount state
-    const [ups, setUps] = useState(props.post.ups);
+    const [ups, setUps] = useState("none");
 
 
     useEffect(() => {
@@ -63,9 +65,12 @@ const Posts = (props) => {
         <div className="large-container">
             <article className={DarkMode ? 'redditpost-darkmode' : 'redditpost-lightmode'}>
                 <div className={DarkMode ? 'votes-box-dark' : 'votes-box-light'}>
-                    <button className="upvote vote"><ImArrowUp2 /></button>
+                    <a href={`https://www.reddit.com/${props.post.permalink}`} target="_blank"><button className="upvote vote"
+                        ><HiOutlineExternalLink />
+                    </button></a>
                     <p className="vote-count">{props.post.ups}</p>
-                    <button className="downvote vote"><ImArrowDown2 /></button>
+                    <button className="downvote vote"><BsHeart 
+                    /></button>
                 </div>
                 <div className="post-container">
                     <h3 className={DarkMode ? 'posttitle-darkmode' : 'posttitle-lightmode'}>{props.post.title}</h3>
@@ -77,7 +82,7 @@ const Posts = (props) => {
                         <span className="author-data">
                             <span className={DarkMode ? 'author-darkmode' : 'author-lightmode'}>{props.post.author}</span>
                         </span>
-                        <span>{moment.unix(props.post.created_utc).fromNow()}</span>
+                        <span className={DarkMode ? 'time-dk' : 'time-lt'}>{moment.unix(props.post.created_utc).fromNow()}</span>
                     
                         <span className="post-comment-data">
                             <button className={DarkMode ? 'toggleComments-dark' : 'toggleComments-light'} 

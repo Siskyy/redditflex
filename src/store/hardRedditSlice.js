@@ -25,6 +25,7 @@ export const hardSubredditSlice = createSlice({
         subreddits: initialSubreddits,
         searchTerm: '',
         subSearchTerm: '',
+        sortBy: 'hot',
     },
     reducers: {
         selectedSubreddit(state, action) {
@@ -35,6 +36,9 @@ export const hardSubredditSlice = createSlice({
         },
         setSubSearchTerm(state, action) {
             state.subSearchTerm = action.payload;
+        },
+        setSortBy(state, action) {
+            state.sortBy = action.payload;
         }
     }
 });
@@ -43,6 +47,7 @@ export const {
     selectedSubreddit,
     setSearchTerm,
     setSubSearchTerm,
+    setSortBy,
 } = hardSubredditSlice.actions;
 
 export default hardSubredditSlice.reducer;

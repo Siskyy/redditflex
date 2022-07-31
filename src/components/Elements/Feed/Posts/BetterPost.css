@@ -69,6 +69,9 @@
     color: var(--color-b600);
     font-size: .9rem;
 }
+.time-lt {
+    color: var(--color-b600);
+}
 
 .post-image-container {
     width: 100%;
