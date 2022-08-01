@@ -17,8 +17,54 @@ body {
   align-items: start;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1020px) {
   #root {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
+  }
+  .app-sidebar {
+    max-width: 300px;
+  }
+  .sortBy-buttons {
+    gap: 5px !important;
+  }
+  
+}
+
+@media only screen and (max-width: 950px) {
+  .app-sidebar {
+    max-width: 150px;
+  }
+  .subreddit-title {
+    display: none;
+  }
+  .subredditcard-dark {
+    border-radius: 40px;
+  }
+  .subredditcard-light {
+    border-radius: 50px !important;
+    height: 80px;
+    width: 80px;
+  }
+  .searchform-dark2 {
+    display: none ;
+  }
+  .searchform-light2 {
+    display: none !important;
+  }
+  .feed-darkmode {
+    max-width: 600px;
+  }
+  .feed-lightmode {
+    max-width: 600px;
+    grid-column: 0;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .sortBy-buttons {
+    display: none !important;
+  }
+  .feed-lightmode {
+    border: none !important;
   }
 }

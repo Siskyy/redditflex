@@ -43,7 +43,7 @@ const SideBar = () => {
     }, [searchTerm])
 
     return (
-        <div>
+        <div className='app-sidebar'>
             <Redditsearch />
             <div className={DarkMode ? 'subreddits-dark' : 'subreddits-light'}>
             <Subreddits />

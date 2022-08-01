@@ -82,9 +82,13 @@
     transition: all 0.2s ease-in-out;
     align-self: center;
 }
-.filter-button:hover {
+.filter-button.filter-dark:hover {
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+.filter-button.filter-light:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(17, 202, 240, 1);
 }
 .filter-light {
     background-color: var(--color-b500);
@@ -96,4 +100,12 @@
 .sortBy-buttons {
     display: flex;
     gap: 15px;
+}
+.filter-button.filter-dark.selected-filter {
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    color: var(--color-p100);
+}
+.filter-button.filter-light.selected-filter {
+    box-shadow: 5 10px 20px rgba(17, 202, 240, 1);
+    color: var(--color-b600);
 }
